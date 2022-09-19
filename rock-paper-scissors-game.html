@@ -17,21 +17,20 @@
 
         }
 
-        function rockPaperScissors(playerSelection, computerSelection) {
-            computerSelection = getComputerChoice()
+        function rockPaperScissors() {
+            const computerSelection = getComputerChoice()
 
-            playerSelection = prompt("Let's play Rock, Paper, Scissors!")
-
-            playerSelection.toLowerCase()
+            let playerSelection = prompt("Let's play Rock, Paper, Scissors!").toLowerCase()
             
             let playersChoice = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
-
+            
 
             let winningCombos = {
                 "Rock": "Scissors",
                 "Paper": "Rock",
                 "Scissors": "Paper"
             }
+            console.log({playersChoice, computerSelection})
 
 
             if (playersChoice === computerSelection) {
@@ -48,19 +47,24 @@
            
      
             function game() {
-                playersPoints = 0
-                compsPoints = 0
+                let playersPoints = 0
+                let compsPoints = 0
                 
 
                 // Adding a point for each winner of the round
-                for (let i = 0; i < 5; i++) {
+                let i = 0
+                while (i <= 5){
+                  
+                    let outcome = rockPaperScissors()
 
-                    if (rockPaperScissors() === "Win") {
-                        playersPoints++
+                    if (outcome === "Win") {
+                        playersPoints +=1
+                        i++
                     }
 
-                    if (rockPaperScissors() === "Lose") {
-                        compsPoints++
+                    if (outcome === "Lose") {
+                        compsPoints +=1
+                        i++
                     }
 
                    // No more than 5 rounds, so first one to 3 wins 
@@ -74,12 +78,13 @@
                     if (compsPoints === 3) {
                         return "Computer wins!"
                     }
-                    
+                    console.log({playersPoints, compsPoints, i})
                     }
+
+
                    
                 }
     
-                console.log(rockPaperScissors("paper", getComputerChoice()))
                 console.log(game())
                
 
