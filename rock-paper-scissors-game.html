@@ -44,12 +44,41 @@
             }
 
         
-        console.log(rockPaperScissors("paper", getComputerChoice()))
+     
+            function game() {
+                let playersPoints = 0
+                let compsPoints = 0
+                
+
+                // Adding points for each winner of the round
+                for (let i = 0; i < 5; i++) {
+
+                    if (rockPaperScissors() ==="You win! Yaaay!") {
+                        playersPoints++
+                    }
+
+                    if (rockPaperScissors() === "You Lose! Better luck next time") {
+                        compsPoints++
+                    }
+
+                   // No more than 5 rounds, so first one to 3 wins 
+
+            
+                    if (playersPoints === 3){
+                        return "You win!"
+                
+                    }
+
+                    if (compsPoints === 3) {
+                        return "Computer wins!"
+                    }
+
+                    }
+                    console.log(game(), playersPoints, compsPoints)
+                }
+    
 
 
-
-
-        
     </script>
 
 
