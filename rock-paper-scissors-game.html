@@ -20,30 +20,36 @@
         function rockPaperScissors(playerSelection, computerSelection) {
             computerSelection = getComputerChoice()
 
-            let playersEntry = ""
-            playersEntry.toLowerCase()
-
-            const playerSelection = playersEntry.charAt(0).toUpperCase() + playersEntry.slice(1)
+            playerSelection.toLowerCase()
             
+            let playersChoice = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
+
+
             let winningCombos = {
-                "rock": "Scissors",
-                "paper": "Rock",
-                "scissors": "Paper"
+                "Rock": "Scissors",
+                "Paper": "Rock",
+                "Scissors": "Paper"
             }
 
 
-            if playerSelection === computerSelection {
+            if (playersChoice === computerSelection) {
                 return "It's a draw! Try again"
             }
 
+            else if (computerSelection === winningCombos[playersChoice]) {
+                return "You win! Yaaay!"
+            }
             
-            
+            return "You Lose! Better luck next time"
             }
 
-            return 
         
-        console.log(rock[computerSelection])
+        console.log(rockPaperScissors("paper", getComputerChoice()))
 
+
+
+
+        
     </script>
 
 
