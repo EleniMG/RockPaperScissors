@@ -17,17 +17,34 @@
 
         }
 
-        function game(playerSelection, computerSelection) {
-            const computerSelection = getComputerChoice()
+        function rockPaperScissors(playerSelection, computerSelection) {
+            computerSelection = getComputerChoice()
             let playersEntry = ""
             playersEntry.toLowerCase()
 
-            const playerSelection = playersEntry.charAt(0).toUpperCase() + playersEntry.slice(1)
-           
+            playerSelection = playersEntry.charAt(0).toUpperCase() + playersEntry.slice(1)
+            
+            const Rock = {
+                "Paper": "You Lose! Better luck next time",
+                "Scissors": "Winner, winner, chicken dinner!",
+                "Rock": "It's a draw! Nil pwa for anyone"
+            }
 
+            const Paper = {
+                "Paper": "It's not a cravate, it's a tie!",
+                "Scissors": "You Lose! Better luck next time",
+                "Rock": "Daaaamn! You're good at this!"
+            }
 
+            const Scissors = {
+                "Paper": "You win! Looks like you have all the luck!",
+                "Scissors": "It's a draw! Two pairs of scissors... dont run with those!",
+                "Rock": "Ahh better luck next time"
+
+            }
         }
-
+        
+        
 
     </script>
 
