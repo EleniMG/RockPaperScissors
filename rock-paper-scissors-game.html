@@ -33,31 +33,31 @@
 
 
             if (playersChoice === computerSelection) {
-                return "It's a draw! Try again"
+                return "Draw"
             }
 
             else if (computerSelection === winningCombos[playersChoice]) {
-                return "You win! Yaaay!"
+                return "Win"
             }
             
-            return "You Lose! Better luck next time"
+            return "Lose"
             }
 
-        
+           
      
-            function game() {
-                let playersPoints = 0
-                let compsPoints = 0
+            function game(playersPoints, compsPoints) {
+                playersPoints = 0
+                compsPoints = 0
                 
 
-                // Adding points for each winner of the round
+                // Adding a point for each winner of the round
                 for (let i = 0; i < 5; i++) {
 
-                    if (rockPaperScissors() ==="You win! Yaaay!") {
+                    if (rockPaperScissors() === "Win") {
                         playersPoints++
                     }
 
-                    if (rockPaperScissors() === "You Lose! Better luck next time") {
+                    if (rockPaperScissors() === "Lose") {
                         compsPoints++
                     }
 
@@ -72,12 +72,13 @@
                     if (compsPoints === 3) {
                         return "Computer wins!"
                     }
-
+                    
                     }
-                    console.log(game(), playersPoints, compsPoints)
+                   
                 }
     
-
+                console.log(rockPaperScissors("paper", getComputerChoice()))
+                
 
     </script>
 
