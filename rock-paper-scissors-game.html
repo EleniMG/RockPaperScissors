@@ -8,12 +8,17 @@
 </head>
 <body>
     <script>
-        function getComputerChoice(element) {
+        function getComputerChoice() {
+            const element = ["Rock", "Paper", "Scissors"]
+            const randomNumber = Math.floor(Math.random() * 3)
+            console.log(randomNumber)
+            return element
             
 
         }
 
-
+        getComputerChoice()
+        
 
 
     </script>
