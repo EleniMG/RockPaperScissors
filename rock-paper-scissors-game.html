@@ -20,6 +20,8 @@
         function rockPaperScissors(playerSelection, computerSelection) {
             computerSelection = getComputerChoice()
 
+            let playerSelection = prompt("Let's play Rock, paper, Scissors!")
+
             playerSelection.toLowerCase()
             
             let playersChoice = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
@@ -78,7 +80,7 @@
                 }
     
                 console.log(rockPaperScissors("paper", getComputerChoice()))
-                
+                console.log(game())
 
     </script>
 
