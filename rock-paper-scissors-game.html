@@ -20,7 +20,7 @@
         function rockPaperScissors(playerSelection, computerSelection) {
             computerSelection = getComputerChoice()
 
-            let playerSelection = prompt("Let's play Rock, paper, Scissors!")
+            playerSelection = prompt("Let's play Rock, Paper, Scissors!")
 
             playerSelection.toLowerCase()
             
@@ -47,7 +47,7 @@
 
            
      
-            function game(playersPoints, compsPoints) {
+            function game() {
                 playersPoints = 0
                 compsPoints = 0
                 
@@ -81,6 +81,7 @@
     
                 console.log(rockPaperScissors("paper", getComputerChoice()))
                 console.log(game())
+               
 
     </script>
 
