@@ -2,7 +2,9 @@
 
 ## Instructions:
 1. Open the [Rock, Paper, Scissors game](https://rock-paper-scissors-by-eleni.netlify.app/)
-
+2. Click "Start Round"
+3. Follow the instructions on the alerts
+4. First player to three points will win!
 
 
 ### What I have used:
