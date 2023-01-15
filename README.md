@@ -12,8 +12,13 @@
 
 
 ### What I have learned:
-- 
+- Game logic
+- Randomisation
+- Using JavaScript methods to modify strings based on user's input
+- Using innerHTML to modify content of HTML
 
 
 ### Improvements to be made:
-- 
+- Placing choice and score messages on UI instead of alerts
+- Account for spelling mistakes by the user
+- Changing 'Start' button to 'Reset' or 'Stop'
