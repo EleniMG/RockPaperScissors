@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
 <body>
+
+    <div class="wrapper">
+        <h1 id="winner"></h1>
+    
+        <button onclick="game()">Start Round</button>
+    </div>
+
     <script>
         function getComputerChoice() {
             const element = ["Rock", "Paper", "Scissors"]
             const randomNumber = Math.floor(Math.random() * 3)
             
             return element[randomNumber]
-            
-
         }
 
         function rockPaperScissors() {
@@ -30,7 +36,10 @@
                 "Paper": "Rock",
                 "Scissors": "Paper"
             }
+
             console.log({playersChoice, computerSelection})
+
+            alert(`Your choice: ${playersChoice} Computer's choice: ${computerSelection}`)
 
 
             if (playersChoice === computerSelection) {
@@ -42,55 +51,46 @@
             }
             
             return "Lose"
-            }
-
-           
+        }
      
-            function game() {
-                let playersPoints = 0
-                let compsPoints = 0
-                
-
-                // Adding a point for each winner of the round
-                let i = 0
-                while (i <= 5){
-                  
-                    let outcome = rockPaperScissors()
-
-                    if (outcome === "Win") {
-                        playersPoints +=1
-                        i++
-                    }
-
-                    if (outcome === "Lose") {
-                        compsPoints +=1
-                        i++
-                    }
-
-                   // No more than 5 rounds, so first one to 3 wins 
-
+        function game() {
+            let playersPoints = 0
+            let compsPoints = 0
             
-                    if (playersPoints === 3){
-                        return "You win!"
+
+            // Adding a point for each winner of the round
+            let i = 0
+            while (i <= 5){
                 
-                    }
+                let outcome = rockPaperScissors(playersPoints, compsPoints)
 
-                    if (compsPoints === 3) {
-                        return "Computer wins!"
-                    }
-                    console.log({playersPoints, compsPoints, round: i})
-                    }
-
-
-                   
+                if (outcome === "Win") {
+                    playersPoints +=1
+                    i++
                 }
-    
-                console.log(game())
-               
 
+                if (outcome === "Lose") {
+                    compsPoints +=1
+                    i++
+                }
+
+                // No more than 5 rounds, so first one to 3 wins 
+                alert(`Your score: ${playersPoints} Computer's score: ${compsPoints}`)
+        
+                if (playersPoints === 3){
+                    return document.getElementById("winner").innerHTML = 'You win!'
+                }
+
+                if (compsPoints === 3) {
+                    return document.getElementById("winner").innerHTML = 'Computer wins!'
+                }
+
+                console.log({playersPoints, compsPoints, i})
+            }
+        }            
     </script>
 
-
+    
     
 </body>
 </html>

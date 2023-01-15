@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    padding: 30px 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(230, 165, 135);
+    color: black;
+    font-weight: bold;
+}
